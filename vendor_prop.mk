@@ -255,3 +255,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.wlan.chip=39xx \
     ro.wlan.mimo=1 \
     ro.wlan.vendor=qcom \
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.build.version.security_patch=2020-01-01
