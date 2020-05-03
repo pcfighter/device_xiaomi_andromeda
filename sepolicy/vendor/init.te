@@ -1,0 +1,4 @@
+allow init {
+    adsprpcd_file
+    persist_file
+}:dir mounton;
