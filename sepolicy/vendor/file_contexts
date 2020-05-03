@@ -7,6 +7,12 @@
 # Camera
 /mnt/vendor/persist/camera(/.*)?              u:object_r:camera_persist_file:s0
 
+# DSP
+/dsp(/.*)?                 u:object_r:tmp_root_mount_file:s0
+
+# Firmware
+/firmware(/.*)?            u:object_r:tmp_root_mount_file:s0
+
 # Fingerprint
 /dev/goodix_fp                                u:object_r:fingerprint_device:s0
 /data/vendor/goodix(/.*)?                     u:object_r:fingerprint_data_file:s0
@@ -22,6 +28,9 @@
 
 # IR
 /dev/lirc0          u:object_r:ir_spi_device:s0
+
+# Persist
+/persist(/.*)?             u:object_r:tmp_root_mount_file:s0
 
 # Remosaic
 /vendor/bin/remosaic_daemon     u:object_r:remosaic_daemon_exec:s0
