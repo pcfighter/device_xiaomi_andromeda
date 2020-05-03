@@ -1,2 +1,0 @@
-allow mediaserver qdsp_device:chr_file r_file_perms;
-r_dir_file(mediaserver, adsprpcd_file);
