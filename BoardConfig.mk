@@ -25,6 +25,9 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a76
 
 TARGET_USES_64_BIT_BINDER := true
 
+ENABLE_CPUSETS := true
+ENABLE_SCHEDBOOST := true
+
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 
@@ -48,8 +51,11 @@ TARGET_KERNEL_CONFIG := andromeda_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/andromeda
 
 # Platform
+BOARD_USES_QCOM_HARDWARE := true
+QCOM_BOARD_PLATFORMS += msmnile
 TARGET_BOARD_PLATFORM := msmnile
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno640
+TARGET_USES_QCOM_BSP := true
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := andromeda
@@ -108,6 +114,7 @@ TARGET_USE_QTI_BT_STACK := true
 
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
+USE_DEVICE_SPECIFIC_CAMERA := true
 
 # Charger Mode
 BOARD_CHARGER_ENABLE_SUSPEND := true
@@ -124,6 +131,10 @@ TARGET_ENABLE_MEDIADRM_64 := true
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
+
+# FM
+BOARD_HAS_QCA_FM_SOC := "cherokee"
+BOARD_HAVE_QCOM_FM := true
 
 # Graphics
 MAX_VIRTUAL_DISPLAY_DIMENSION := 4096
@@ -145,6 +156,9 @@ TARGET_USES_ION := true
 # Vendor init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_andromeda
 TARGET_RECOVERY_DEVICE_MODULES := libinit_andromeda
+
+# NFC
+TARGET_USES_NQ_NFC := true
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 134217728
@@ -195,7 +209,7 @@ VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # Sepolicy
 include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/temp
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # System properties
