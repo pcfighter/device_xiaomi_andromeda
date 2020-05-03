@@ -93,9 +93,19 @@ persist.radio.calls.on.ims=1
 persist.radio.volte.dan_support=true
 persist.sys.cust.lte_config=true
 persist.radio.VT_HYBRID_ENABLE=1
+persist.radio.VT_CAM_INTERFACE=1
+telephony.lteOnCdmaDevice=1
 
-#iwaln vowifi corresponding
+# vendor
+persist.vendor.radio.data_con_rprt=1 
+
+# rcs
+persist.rcs.supported=1
+
+#iwlan vowifi corresponding
 persist.vendor.data.iwlan.enable=true
+persist.data.iwlan=1
+persist.data.iwlan.ipsec.ap=1
 
 #set dpm related prop
 persist.vendor.dpm.feature=1
@@ -352,4 +362,5 @@ persist.camera.sat.fallback.lux.d=50
 persist.vendor.btstack.enable.twsplus=true
 persist.vendor.btstack.connect.peer_earbud=true
 
-#
+ro.vendor.qti.va_aosp.support=1
+
