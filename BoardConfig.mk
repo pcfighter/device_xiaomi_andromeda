@@ -25,9 +25,6 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a76
 
 TARGET_USES_64_BIT_BINDER := true
 
-ENABLE_CPUSETS := true
-ENABLE_SCHEDBOOST := true
-
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 
@@ -36,7 +33,7 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0xa90000
 BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom androidboot.console=ttyMSM0
 BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a600000.dwc3
-#BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_CMDLINE += service_locator.enable=1
 BOARD_KERNEL_CMDLINE += firmware_class.path=/vendor/firmware_mnt/image
 BOARD_KERNEL_CMDLINE += loop.max_part=7
