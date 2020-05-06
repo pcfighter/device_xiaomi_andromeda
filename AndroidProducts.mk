@@ -6,3 +6,8 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/omni_andromeda.mk
+
+COMMON_LUNCH_CHOICES := \
+    omni_andromeda-user \
+    omni_andromeda-userdebug \
+    omni_andromeda-eng
