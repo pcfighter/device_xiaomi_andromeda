@@ -7,6 +7,15 @@
 # Inherit vendor
 $(call inherit-product, vendor/xiaomi/andromeda/andromeda-vendor.mk)
 
+OMNI_PRODUCT_PROPERTIES += \
+    ro.apex.updatable=true
+
+PRODUCT_CHARACTERISTICS := nosdcard
+
+# VNDK
+PRODUCT_TARGET_VNDK_VERSION := 29
+
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
@@ -17,8 +26,7 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay
 
 # Properties
 include $(LOCAL_PATH)/vendor_prop.mk
@@ -365,10 +373,6 @@ PRODUCT_PACKAGES += \
     rcs_service_api \
     rcs_service_api.xml
 
-# Recovery
-PRODUCT_PACKAGES += \
-    librecovery_updater_xiaomi
-
 # RenderScript
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
@@ -414,10 +418,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service
-
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
 
 # USB
 PRODUCT_PACKAGES += \
