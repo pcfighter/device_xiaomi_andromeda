@@ -176,10 +176,10 @@ PRODUCT_BOOT_JARS += \
 
 # IMS
 PRODUCT_PACKAGES += \
-    ims-ext-common_system
+    ims-ext-common
 
 PRODUCT_BOOT_JARS += \
-    ims-ext-common_system
+    ims-ext-common
 
 # IPA
 PRODUCT_PACKAGES += \
