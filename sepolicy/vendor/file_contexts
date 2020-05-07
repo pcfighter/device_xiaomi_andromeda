@@ -24,7 +24,6 @@
 
 # HALs
 /vendor/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_sm8150                                     u:object_r:hal_light_default_exec:s0
-/vendor/bin/hw/vendor\.lineage\.biometrics\.fingerprint\.inscreen@1.0-service\.xiaomi_sm8150            u:object_r:hal_lineage_fod_default_exec:s0
 
 # Audio devices
 /dev/elliptic(.*)?                            u:object_r:sound_device:s0
@@ -38,7 +37,6 @@
 /data/vendor/thermal(/.*)?                    u:object_r:thermal_data_file:s0
 
 # Executables
-/vendor/bin/mlipayd@1\.1                      u:object_r:hal_mlipay_default_exec:s0
 /vendor/bin/nv_mac                            u:object_r:wcnss_service_exec:s0
 
 # Files in rootfs
