@@ -1,0 +1,2 @@
+# Connect to ims service.
+allow radio ims:unix_stream_socket connectto;

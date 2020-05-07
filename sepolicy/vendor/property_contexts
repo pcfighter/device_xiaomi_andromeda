@@ -1,2 +1,6 @@
+# IMS property
+sys.ims.        u:object_r:qcom_ims_prop:s0
+
+
 # Xiaomi thermal daemon
 sys.thermal.                             u:object_r:thermal_normal_prop:s0
