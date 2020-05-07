@@ -476,6 +476,7 @@
         </interface>
         <fqname>@1.0::IDisplayPostproc/default</fqname>
     </hal>
+    <!--
     <hal format="hidl">
         <name>vendor.lineage.livedisplay</name>
         <transport>hwbinder</transport>
@@ -489,6 +490,7 @@
             <instance>default</instance>
         </interface>
     </hal>
+    
     <hal format="hidl">
         <name>vendor.lineage.trust</name>
         <transport>hwbinder</transport>
@@ -498,6 +500,7 @@
             <instance>default</instance>
         </interface>
     </hal>
+    -->
     <hal format="hidl">
         <name>vendor.nxp.hardware.nfc</name>
         <transport>hwbinder</transport>
