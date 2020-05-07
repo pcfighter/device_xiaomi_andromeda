@@ -1,0 +1,5 @@
+# Allow settings to find hal_displayfeature_hwservice
+allow settings hal_displayfeature_hwservice:hwservice_manager find;
+
+# Allow binder communication with hal_motor
+binder_call(settings, hal_displayfeature)
