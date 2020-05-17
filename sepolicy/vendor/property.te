@@ -1,1 +1,5 @@
-type qcom_ims_prop, property_type;
+# Display Feature
+type vendor_displayfeature_prop, property_type;
+#Fingerprint
+type hal_fingerprint_prop, property_type;
+
